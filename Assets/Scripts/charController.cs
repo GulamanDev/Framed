@@ -38,7 +38,6 @@ public class charController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
 
-            //Interact
             if(Input.GetButton("Interact"))
             {
                 Interact();
