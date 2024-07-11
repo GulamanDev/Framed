@@ -14,6 +14,8 @@ public class RaycastController : MonoBehaviour
     //The UI text component that will display the name of the interactable hit
     public TextMeshProUGUI interactionInfo;
 
+     private bool isDoorOpen = false;
+
     // Update is called once per frame
     private void Update()
     {
@@ -35,21 +37,35 @@ public class RaycastController : MonoBehaviour
              interactionInfo.text = "";
 
         }
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, raycastDistance, door))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, raycastDistance, door))
         {
             interactionInfo.text = hit.transform.GetComponent<Item>().id;
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && hit.transform.GetComponent<Item>().id == "Door")
             {
-               
+                Animator doorAnimator = hit.transform.GetComponent<Animator>();
+                if (doorAnimator!= null)
+                {
+                    if (!isDoorOpen)
+                    {
+                        doorAnimator.SetBool("character_nearby", true);
+                        Debug.Log("Door interaction - Open");
+                        isDoorOpen = true;
+                    }
+                    else
+                    {
+                        doorAnimator.SetBool("character_nearby", false);
+                        Debug.Log("Door interaction - Close");
+                        isDoorOpen = false;
+                    }
+                }
             }
-            
         }
-
         //TODO: Raycast
         //1. Perform a raycast originating from the gameobject's position towards its forward direction.
         //   Make sure that the raycast will only hit the layer specified in the layermask
         //2. Check if the object hits any Interactable. If it does, show the interactionInfo and set its text
         //   to the id of the Interactable hit. If it doesn't hit any Interactable, simply disable the text
         //3. Make sure to interact with the Interactable only when the mouse button is pressed.
+        
     }
 }
