@@ -41,7 +41,7 @@ public class charController : MonoBehaviour
             //Interact
             if(Input.GetButton("Interact"))
             {
-                Interact();
+                // Interact();
             }
         }
 
@@ -54,21 +54,21 @@ public class charController : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
 
-        void Interact()
-        {
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
+        // void Interact()
+        // {
+        //     Ray ray = new Ray(transform.position, transform.forward);
+        //     RaycastHit hit;
 
-            if(Physics.Raycast(ray, out hit, interactRange))
-            {
-                interactable interact = hit.collider.GetComponent<interactable>();
-                if(interact !=null)
-                {
-                    interact.Interact();
-                }
+        //     if(Physics.Raycast(ray, out hit, interactRange))
+        //     {
+        //         Interactable interact = hit.collider.GetComponent<Interactable>();
+        //         if(interact !=null)
+        //         {
+        //             interact.Interact();
+        //         }
 
-            }
-        }
+        //     }
+        // }
 
 
 
