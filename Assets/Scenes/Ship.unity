@@ -6660,7 +6660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678462702843051549, guid: 3a93036398f4bc146973599c6389f448, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.11
+      value: 32.667
       objectReference: {fileID: 0}
     - target: {fileID: 8678462702843051549, guid: 3a93036398f4bc146973599c6389f448, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6668,7 +6668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8678462702843051549, guid: 3a93036398f4bc146973599c6389f448, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.88
+      value: 34.014
       objectReference: {fileID: 0}
     - target: {fileID: 8678462702843051549, guid: 3a93036398f4bc146973599c6389f448, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16623,7 +16623,7 @@ Transform:
   m_GameObject: {fileID: 1147533206}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.859, y: 2.353, z: -1.425}
+  m_LocalPosition: {x: 1.859, y: 2.681, z: -1.425}
   m_LocalScale: {x: 0.5903352, y: 0.1115518, z: 0.5903352}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25560,7 +25560,7 @@ MonoBehaviour:
     m_Bits: 64
   desk:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   interactionInfo: {fileID: 864938392}
 --- !u!1001 &1727520927
 PrefabInstance:
