@@ -27518,8 +27518,8 @@ GameObject:
   - component: {fileID: 1783422256}
   - component: {fileID: 1783422255}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
+  m_Name: NPC
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
