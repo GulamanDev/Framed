@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IsolationBarManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class IsolationBarManager : MonoBehaviour
     public float refillRate = 5f;
 
     private bool nearNPC = false;
+
+    private bool gameOverTriggered = false;
 
     void Start()
     {
@@ -35,6 +38,7 @@ public class IsolationBarManager : MonoBehaviour
                 currentIsolation = 0;
                 isolationSlider.value = currentIsolation;
                 FindObjectOfType<ScreenFade>().FadeToBlack();
+                GameOver();
             }
         }
     }
@@ -54,5 +58,10 @@ public class IsolationBarManager : MonoBehaviour
     public void SetNearNPC(bool status)
     {
         nearNPC = status;
+    }
+
+    private void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
